@@ -22,6 +22,4 @@ describe('CadastroComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-
 });
