@@ -1,21 +1,24 @@
 <div class="container teste ">
   <div class="box">
     <div class="row">
-    <form >
+    <form [formGroup]="meuFormGroup" >
       <fieldset class="fieldset ">
         <legend class="legend"><br>Login<br></legend>
       <div class="row g-3 align-items-center email ">
       <div class="col-auto">
         <label for="email" class="col-form-label">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="Digite seu email" required>
-
+        <input type="email" class="form-control" id="email" placeholder="Digite seu email" (keyup)="email = $event.target.value" required>
+<span *ngIf="meuFormGroup.controls.email.errors">
+Campo obrigatório
+</span>
       </div>
       </div>
 
       <div class="row g-3 align-items-center">
         <div class="col-auto">
           <label for="inputPassword6" class="col-form-label">Senha</label>
-          <input type="password" id="inputPassword6" class="form-control" placeholder="Digite sua senha" aria-describedby="passwordHelpInline" required>
+          <input type="password" id="inputPassword6" class="form-control" placeholder="Digite sua senha" aria-describedby="passwordHelpInline" (keyup)="senha = $event.target.value" required>
+
         </div>
 
         <div class="col-auto">
@@ -23,7 +26,7 @@
           </span>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Entrar</button>
+      <button type="submit" class="btn btn-primary" (click)="postar()" [disabled]="!meuFormGroup.valid">Entrar</button>
     </fieldset>
     </form>
     </div>

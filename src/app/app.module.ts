@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { RodapeComponent } from './templetes/rodape/rodape.component';
 import { HomeComponent } from './templetes/home/home.component';
 import { NavbarComponent } from './templetes/navbar/navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavbarComponent } from './templetes/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

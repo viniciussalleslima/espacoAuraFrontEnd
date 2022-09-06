@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -6,8 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+meuFormGroup!: FormGroup;
 
-  constructor() { }
+
+  constructor(private formBuilder: FormBuilder) {
+
+    this.meuFormGroup = this.formBuilder.group({
+      email:['', [Validators.required, Validators.email]],
+      senha:['', Validators.required]
+    });
+  }
+
+  postar(){
+    if (!this.meuFormGroup.valid){
+      console.log("Formulário inválido");
+      return;
+    }
+    console.log("Formulário válido", this.meuFormGroup.value)
+  }
+
 
   ngOnInit(): void {
   }
