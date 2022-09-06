@@ -1,0 +1,31 @@
+.h1{
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 1rem;
+
+  color:#ffc107;
+}
+
+.navbar{
+  margin-top: 2%;
+}
+
+.btn{
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.corpo_cadastro{
+  margin-top: 2%;
+}
+
+.navbar{
+  width: 50%;
+}
+
+form, .alert{
+  margin-bottom: 0;
+}
+
+
+

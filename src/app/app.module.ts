@@ -3,10 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RodapeComponent } from './templetes/rodape/rodape.component';
+import { HomeComponent } from './templetes/home/home.component';
+import { NavbarComponent } from './templetes/navbar/navbar.component';
+import { CadastroComponent } from './telas/cadastro/cadastro.component';
+import { LoginComponent } from './telas/login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RodapeComponent,
+    HomeComponent,
+    NavbarComponent,
+    CadastroComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
